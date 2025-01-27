@@ -94,3 +94,17 @@ a {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+/* footer */
+footer {
+    padding: 10px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    margin: auto;
+    justify-content: space-between;
+}

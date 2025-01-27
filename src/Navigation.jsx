@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import iconGithub from "./assets/ic-github.png";
 import iconProfile from "./assets/bf.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Nav = () => {
   const handleSubmit = () => {};
   const [val, setVal] = useState("");

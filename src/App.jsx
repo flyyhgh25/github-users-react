@@ -1,16 +1,20 @@
 import Content from "./Content";
+import { socials } from "./data";
+import Footer from "./Footer";
 import "./index.css";
 import Nav from "./Navigation";
 
 function App() {
+  const url = "https://api.github.com/users";
   return (
     <>
       <header>
         <Nav />
       </header>
       <main>
-        <Content/>
+        <Content url={url} />
       </main>
+      <Footer socials={socials} />
     </>
   );
 }
