@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import iconProfile from "./assets/bf.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookBookmark, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import UseFetch from "./axios/custom";
 const Content = ({ url }) => {
   const [users, setUsers] = useState([]);
   const height = 30;
@@ -9,9 +10,8 @@ const Content = ({ url }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setUsers(data);
+        const response = await UseFetch(url);
+        setUsers(response.data);
         console.log(users);
       } catch (error) {
         console.log(error);

@@ -5,7 +5,7 @@ import "./index.css";
 import Nav from "./Navigation";
 
 function App() {
-  const url = "https://api.github.com/users";
+  const url = "/users";
   return (
     <>
       <header>
