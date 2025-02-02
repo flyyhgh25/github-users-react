@@ -7,14 +7,14 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [val, setVal] = useState("");
-  const [showLink, setShowLink] = useState(false);
+  const [showLink, setShowLink] = useState(true);
   const linkContainerRef = useRef(null);
   const linkRef = useRef(null);
   const height = 30;
   const width = 30;
 
   const toggleLink = () => {
-    setShowLink((prev) => !prev);
+    setShowLink(!showLink);
   };
 
   const handleSubmit = (e) => {
@@ -23,8 +23,7 @@ const Nav = () => {
   };
 
   const linkStyle = {
-    width: showLink && linkRef.current ? `100%` : "0px",
-
+    width: showLink ? `100%` : "0px",
   };
 
   return (
